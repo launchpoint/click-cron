@@ -1,0 +1,20 @@
+Cron has finished running.
+
+%h1 Log Messages
+%p
+  Messages are output individually by modules and are not formatted by cron.
+- global $logs
+%table
+  %tr
+    %th Status
+    %th Message
+    %th Time
+  - foreach($logs as $log)
+    %tr
+      %td
+        +$log[0]
+      %td
+        +$log[1]
+      %td
+        +$log[2]
+    
